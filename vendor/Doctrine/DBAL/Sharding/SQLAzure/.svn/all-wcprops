@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Sharding/SQLAzure
+END
+SQLAzureShardManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Sharding/SQLAzure/SQLAzureShardManager.php
+END
+SQLAzureFederationsSynchronizer.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Sharding/SQLAzure/SQLAzureFederationsSynchronizer.php
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/IBMDB2
+END
+DB2Statement.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Statement.php
+END
+DB2Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Driver.php
+END
+DB2Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Exception.php
+END
+DB2Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/IBMDB2/DB2Connection.php
+END

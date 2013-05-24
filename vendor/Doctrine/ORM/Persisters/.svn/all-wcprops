@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters
+END
+JoinedSubclassPersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/JoinedSubclassPersister.php
+END
+UnionSubclassPersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/UnionSubclassPersister.php
+END
+OneToManyPersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/OneToManyPersister.php
+END
+SingleTablePersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/SingleTablePersister.php
+END
+AbstractEntityInheritancePersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/AbstractEntityInheritancePersister.php
+END
+SqlValueVisitor.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/SqlValueVisitor.php
+END
+ManyToManyPersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/ManyToManyPersister.php
+END
+BasicEntityPersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/BasicEntityPersister.php
+END
+SqlExpressionVisitor.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/SqlExpressionVisitor.php
+END
+AbstractCollectionPersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/AbstractCollectionPersister.php
+END
+ElementCollectionPersister.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/ORM/Persisters/ElementCollectionPersister.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/JoinedInheritanceType
+END
+ChildClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/JoinedInheritanceType/ChildClass.php
+END
+RootClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/JoinedInheritanceType/RootClass.php
+END
+AnotherChildClass.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/JoinedInheritanceType/AnotherChildClass.php
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache
+END
+MemcachedCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/MemcachedCache.php
+END
+RedisCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/RedisCache.php
+END
+PhpFileCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/PhpFileCache.php
+END
+CacheProvider.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/CacheProvider.php
+END
+ZendDataCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/ZendDataCache.php
+END
+XcacheCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/XcacheCache.php
+END
+ArrayCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/ArrayCache.php
+END
+Cache.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/Cache.php
+END
+FileCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/FileCache.php
+END
+WinCacheCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/WinCacheCache.php
+END
+MemcacheCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/MemcacheCache.php
+END
+ApcCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/ApcCache.php
+END
+FilesystemCache.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Cache/FilesystemCache.php
+END

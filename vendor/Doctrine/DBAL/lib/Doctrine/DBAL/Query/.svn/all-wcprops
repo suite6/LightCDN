@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Query
+END
+QueryBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Query/QueryBuilder.php
+END
+QueryException.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Query/QueryException.php
+END

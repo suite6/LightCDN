@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence
+END
+ObjectManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/ObjectManager.php
+END
+ObjectManagerAware.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/ObjectManagerAware.php
+END
+Proxy.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Proxy.php
+END
+ManagerRegistry.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/ManagerRegistry.php
+END
+ObjectRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/ObjectRepository.php
+END
+AbstractManagerRegistry.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/AbstractManagerRegistry.php
+END
+PersistentObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/PersistentObject.php
+END
+ConnectionRegistry.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/ConnectionRegistry.php
+END

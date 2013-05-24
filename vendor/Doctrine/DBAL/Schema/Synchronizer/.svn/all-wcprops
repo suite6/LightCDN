@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Schema/Synchronizer
+END
+SchemaSynchronizer.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Schema/Synchronizer/SchemaSynchronizer.php
+END
+AbstractSchemaSynchronizer.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Schema/Synchronizer/AbstractSchemaSynchronizer.php
+END
+SingleDatabaseSynchronizer.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Schema/Synchronizer/SingleDatabaseSynchronizer.php
+END

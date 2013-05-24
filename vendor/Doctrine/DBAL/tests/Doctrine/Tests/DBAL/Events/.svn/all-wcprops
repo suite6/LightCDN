@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Events
+END
+MysqlSessionInitTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Events/MysqlSessionInitTest.php
+END
+OracleSessionInitTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Events/OracleSessionInitTest.php
+END
+SQLSessionInitTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Events/SQLSessionInitTest.php
+END

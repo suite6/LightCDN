@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL
+END
+Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Driver.php
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/LICENSE
+END
+run-all.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/run-all.sh
+END
+LockMode.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/LockMode.php
+END
+SQLParserUtils.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/SQLParserUtils.php
+END
+Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Connection.php
+END
+UPGRADE
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/UPGRADE
+END
+phpunit.xml.dist
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/phpunit.xml.dist
+END
+Events.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Events.php
+END
+Statement.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Statement.php
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/build.properties
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/README.md
+END
+Configuration.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Configuration.php
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/build.xml
+END
+composer.json
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/composer.json
+END
+ConnectionException.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/ConnectionException.php
+END
+DBALException.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/DBALException.php
+END
+Version.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Version.php
+END
+DriverManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/DriverManager.php
+END
+README.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/README.markdown
+END

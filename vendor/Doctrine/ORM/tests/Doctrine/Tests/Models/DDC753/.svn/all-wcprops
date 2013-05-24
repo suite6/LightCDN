@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC753
+END
+DDC753EntityWithInvalidRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC753/DDC753EntityWithInvalidRepository.php
+END
+DDC753EntityWithCustomRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC753/DDC753EntityWithCustomRepository.php
+END
+DDC753DefaultRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC753/DDC753DefaultRepository.php
+END
+DDC753InvalidRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC753/DDC753InvalidRepository.php
+END
+DDC753EntityWithDefaultCustomRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC753/DDC753EntityWithDefaultCustomRepository.php
+END
+DDC753CustomRepository.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC753/DDC753CustomRepository.php
+END

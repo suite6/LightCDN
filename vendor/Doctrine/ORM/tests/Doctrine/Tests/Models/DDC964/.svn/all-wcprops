@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC964
+END
+DDC964Group.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC964/DDC964Group.php
+END
+DDC964User.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC964/DDC964User.php
+END
+DDC964Address.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC964/DDC964Address.php
+END
+DDC964Guest.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC964/DDC964Guest.php
+END
+DDC964Admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/DDC964/DDC964Admin.php
+END

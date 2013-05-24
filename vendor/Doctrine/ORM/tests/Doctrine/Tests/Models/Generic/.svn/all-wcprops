@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/Generic
+END
+DateTimeModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/Generic/DateTimeModel.php
+END
+SerializationModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/Generic/SerializationModel.php
+END
+DecimalModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/Generic/DecimalModel.php
+END
+BooleanModel.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Models/Generic/BooleanModel.php
+END

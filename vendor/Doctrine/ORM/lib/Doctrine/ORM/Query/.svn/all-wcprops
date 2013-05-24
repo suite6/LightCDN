@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query
+END
+ParserResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/ParserResult.php
+END
+Parser.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/Parser.php
+END
+ParameterTypeInferer.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/ParameterTypeInferer.php
+END
+FilterCollection.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/FilterCollection.php
+END
+SqlWalker.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/SqlWalker.php
+END
+TreeWalker.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/TreeWalker.php
+END
+ResultSetMapping.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/ResultSetMapping.php
+END
+TreeWalkerAdapter.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/TreeWalkerAdapter.php
+END
+TreeWalkerChain.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/TreeWalkerChain.php
+END
+ResultSetMappingBuilder.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/ResultSetMappingBuilder.php
+END
+Expr.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/Expr.php
+END
+Lexer.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/Lexer.php
+END
+Parameter.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/Parameter.php
+END
+Printer.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/Printer.php
+END
+QueryException.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/lib/Doctrine/ORM/Query/QueryException.php
+END

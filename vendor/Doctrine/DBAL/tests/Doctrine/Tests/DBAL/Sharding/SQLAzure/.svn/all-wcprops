@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Sharding/SQLAzure
+END
+AbstractTestCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Sharding/SQLAzure/AbstractTestCase.php
+END
+FunctionalTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Sharding/SQLAzure/FunctionalTest.php
+END
+SQLAzureShardManagerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Sharding/SQLAzure/SQLAzureShardManagerTest.php
+END
+MultiTenantVisitorTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Sharding/SQLAzure/MultiTenantVisitorTest.php
+END
+SQLAzureFederationsSynchronizerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Sharding/SQLAzure/SQLAzureFederationsSynchronizerTest.php
+END

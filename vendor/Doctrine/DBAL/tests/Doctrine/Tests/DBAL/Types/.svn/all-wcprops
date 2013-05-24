@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types
+END
+GuidTypeTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/GuidTypeTest.php
+END
+DateTimeTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/DateTimeTest.php
+END
+IntegerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/IntegerTest.php
+END
+TimeTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/TimeTest.php
+END
+DecimalTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/DecimalTest.php
+END
+VarDateTimeTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/VarDateTimeTest.php
+END
+FloatTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/FloatTest.php
+END
+StringTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/StringTest.php
+END
+ObjectTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/ObjectTest.php
+END
+DateTimeTzTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/DateTimeTzTest.php
+END
+DateTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/DateTest.php
+END
+BlobTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/BlobTest.php
+END
+ArrayTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/ArrayTest.php
+END
+BooleanTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/BooleanTest.php
+END
+SmallIntTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Types/SmallIntTest.php
+END

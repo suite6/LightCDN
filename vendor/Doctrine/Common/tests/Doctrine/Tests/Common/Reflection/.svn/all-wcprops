@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/Doctrine/Tests/Common/Reflection
+END
+DeeperNamespaceParent.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/Doctrine/Tests/Common/Reflection/DeeperNamespaceParent.php
+END
+FullyClassifiedParent.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/Doctrine/Tests/Common/Reflection/FullyClassifiedParent.php
+END
+SameNamespaceParent.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/Doctrine/Tests/Common/Reflection/SameNamespaceParent.php
+END
+StaticReflectionParserTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/Doctrine/Tests/Common/Reflection/StaticReflectionParserTest.php
+END
+NoParent.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/Doctrine/Tests/Common/Reflection/NoParent.php
+END
+UseParent.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/Doctrine/Tests/Common/Reflection/UseParent.php
+END

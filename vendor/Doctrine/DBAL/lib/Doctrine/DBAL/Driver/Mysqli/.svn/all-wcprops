@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/Mysqli
+END
+Driver.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/Mysqli/Driver.php
+END
+MysqliException.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/Mysqli/MysqliException.php
+END
+MysqliConnection.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/Mysqli/MysqliConnection.php
+END
+MysqliStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Driver/Mysqli/MysqliStatement.php
+END

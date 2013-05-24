@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Driver
+END
+Connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Driver/Connection.php
+END
+PDOConnection.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Driver/PDOConnection.php
+END
+ResultStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Driver/ResultStatement.php
+END
+Statement.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Driver/Statement.php
+END
+PDOStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/DBAL/Driver/PDOStatement.php
+END

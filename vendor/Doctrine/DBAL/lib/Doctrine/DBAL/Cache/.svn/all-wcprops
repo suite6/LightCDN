@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Cache
+END
+QueryCacheProfile.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Cache/QueryCacheProfile.php
+END
+CacheException.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Cache/CacheException.php
+END
+ArrayStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Cache/ArrayStatement.php
+END
+ResultCacheStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Cache/ResultCacheStatement.php
+END

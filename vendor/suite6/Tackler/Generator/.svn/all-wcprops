@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/Generator
+END
+TacklerGeneratorApache.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/Generator/TacklerGeneratorApache.php
+END
+ZipStream.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/Generator/ZipStream.php
+END
+TacklerGeneratorNginx.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/Generator/TacklerGeneratorNginx.php
+END
+Zip.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/Generator/Zip.php
+END
+BaseTacklerGenerator.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/Generator/BaseTacklerGenerator.php
+END
+TacklerGeneratorIIS7.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/Generator/TacklerGeneratorIIS7.php
+END

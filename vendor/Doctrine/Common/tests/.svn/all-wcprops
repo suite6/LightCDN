@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/.gitignore
+END
+NativePhpunitTask.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/NativePhpunitTask.php
+END
+README.markdown
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/63reasonscom/!svn/ver/490/LightCDN/vendor/Doctrine/Common/tests/README.markdown
+END

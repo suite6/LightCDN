@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/DbalTypes
+END
+NegativeToPositiveType.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/DbalTypes/NegativeToPositiveType.php
+END
+UpperCaseStringType.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/DbalTypes/UpperCaseStringType.php
+END

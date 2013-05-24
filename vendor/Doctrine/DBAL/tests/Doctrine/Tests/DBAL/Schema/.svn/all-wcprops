@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema
+END
+SchemaDiffTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/SchemaDiffTest.php
+END
+ColumnTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/ColumnTest.php
+END
+SchemaTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/SchemaTest.php
+END
+MySqlSchemaManagerTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/MySqlSchemaManagerTest.php
+END
+ComparatorTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/ComparatorTest.php
+END
+IndexTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/IndexTest.php
+END
+TableTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/TableTest.php
+END
+SequenceTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/tests/Doctrine/Tests/DBAL/Schema/SequenceTest.php
+END

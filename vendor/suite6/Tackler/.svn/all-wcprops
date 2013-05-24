@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler
+END
+TacklerVariable.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/TacklerVariable.php
+END
+TacklerCondition.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/TacklerCondition.php
+END
+TacklerConfiguration.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/TacklerConfiguration.php
+END
+TacklerRule.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/TacklerRule.php
+END
+TacklerAutoload.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/TacklerAutoload.php
+END
+TacklerEtag.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/suite6/Tackler/TacklerEtag.php
+END

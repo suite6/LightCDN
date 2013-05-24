@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema
+END
+SchemaDiff.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/SchemaDiff.php
+END
+Column.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/Column.php
+END
+DrizzleSchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/DrizzleSchemaManager.php
+END
+Schema.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/Schema.php
+END
+SQLServerSchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/SQLServerSchemaManager.php
+END
+AbstractAsset.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/AbstractAsset.php
+END
+Index.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/Index.php
+END
+ForeignKeyConstraint.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/ForeignKeyConstraint.php
+END
+Comparator.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/Comparator.php
+END
+Sequence.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/Sequence.php
+END
+View.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/View.php
+END
+SqliteSchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/SqliteSchemaManager.php
+END
+SchemaException.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/SchemaException.php
+END
+PostgreSqlSchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/PostgreSqlSchemaManager.php
+END
+AbstractSchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/AbstractSchemaManager.php
+END
+TableDiff.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/TableDiff.php
+END
+OracleSchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/OracleSchemaManager.php
+END
+MySqlSchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/MySqlSchemaManager.php
+END
+DB2SchemaManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/DB2SchemaManager.php
+END
+Constraint.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/Constraint.php
+END
+SchemaConfig.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/SchemaConfig.php
+END
+ColumnDiff.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/ColumnDiff.php
+END
+Table.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/DBAL/lib/Doctrine/DBAL/Schema/Table.php
+END

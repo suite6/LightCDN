@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver
+END
+MappingDriverChain.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/MappingDriverChain.php
+END
+FileDriver.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/FileDriver.php
+END
+StaticPHPDriver.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/StaticPHPDriver.php
+END
+FileLocator.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/FileLocator.php
+END
+PHPDriver.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/PHPDriver.php
+END
+AnnotationDriver.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/AnnotationDriver.php
+END
+MappingDriver.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/MappingDriver.php
+END
+DefaultFileLocator.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/DefaultFileLocator.php
+END
+SymfonyFileLocator.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/425/LightCDN/vendor/Doctrine/Common/Persistence/Mapping/Driver/SymfonyFileLocator.php
+END

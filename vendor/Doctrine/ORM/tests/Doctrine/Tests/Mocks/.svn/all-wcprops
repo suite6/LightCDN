@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks
+END
+HydratorMockStatement.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/HydratorMockStatement.php
+END
+SchemaManagerMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/SchemaManagerMock.php
+END
+DriverMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/DriverMock.php
+END
+MetadataDriverMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/MetadataDriverMock.php
+END
+ConnectionMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/ConnectionMock.php
+END
+TaskMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/TaskMock.php
+END
+StatementMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/StatementMock.php
+END
+MockTreeWalker.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/MockTreeWalker.php
+END
+ClassMetadataMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/ClassMetadataMock.php
+END
+UnitOfWorkMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/UnitOfWorkMock.php
+END
+EntityManagerMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/EntityManagerMock.php
+END
+SequenceMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/SequenceMock.php
+END
+DatabasePlatformMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/DatabasePlatformMock.php
+END
+DriverConnectionMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/DriverConnectionMock.php
+END
+IdentityIdGeneratorMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/IdentityIdGeneratorMock.php
+END
+EntityPersisterMock.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/63reasonscom/!svn/ver/489/LightCDN/vendor/Doctrine/ORM/tests/Doctrine/Tests/Mocks/EntityPersisterMock.php
+END

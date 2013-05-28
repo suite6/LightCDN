@@ -49,6 +49,29 @@ function array_deep_merge() {
     }
 }
 
+/*** Begin - Debug Array ***/
+function db($temp)
+{
+	echo "<div align='left' style='color:#050599;'>";
+	
+	echo "<strong style='color:RED;'>Debug:</strong><br>";
+	
+	if(isset($temp))
+	{
+		print "<pre>";
+		print_r($temp);
+		print "</pre>";
+	}
+	else
+	{
+		echo "<span style='color:RED;'>Error: Debug variable is unavailable OR empty.</span>";
+	}
+	echo "</div>";
+}
+/*** End - Debug Array ***/
+
+
+
 // check table exist
 //function checkTable($table) {
 //    global $connection;

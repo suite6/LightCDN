@@ -26,6 +26,13 @@ allowed servers:
    - img3.cache.netease.com
    - purelogics.net
    - localhost
+   - www.pragmasoftwares.com
+   - www.google.com
+   - www.bing.com
+   - a248.e.akamai.net
+   - samplepdf.com
+   - g-ecx.images-amazon.com
+   - www.youtube.com
 setting:
   max space : 20
   

@@ -37,14 +37,27 @@ class HTTPRequest {
         // We ignore the user name, password & fragment as caching the first two would be a
         // security risk and the fragment is useless in a GET
 
+
         $this->scheme = (key_exists('scheme', $url_parts)) ? $url_parts['scheme'] : 'http';
         $this->host = (key_exists('host', $url_parts)) ? mb_strtolower($url_parts['host']) : NULL;
         $this->port = (key_exists('port', $url_parts)) ? $url_parts['port'] : 80;
         $this->path = (key_exists('path', $url_parts)) ? $url_parts['path'] : '/';
         $this->query = (key_exists('query', $url_parts)) ? $url_parts['query'] : NULL;
-
+		
+		
+		
         // This is teh URL we will use for file-matching and the get-back
-        $this->url = $this->scheme . '://' . $this->host . ':' . $this->port . $this->path;
+		// If SSL (https) : do not set default port
+		if($this->scheme=='https') {
+			$this->url = $this->scheme . '://' . $this->host . $this->path;
+		} else {
+			 $this->url = $this->scheme . '://' . $this->host . ':' . $this->port . $this->path;
+		}
+			
+       
+		
+		
+		
         if (!($this->hasQuery()))
             $this->url .= '?' . $this->query;
     }

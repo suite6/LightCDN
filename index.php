@@ -7,7 +7,7 @@ require_once "bootstrap.php";
 
 
 // Running my test case
-$_SERVER['HTTP_REFERRER'] = 'http://img3.cache.netease.com/www/logo/logo_png.png';
+#$_SERVER['HTTP_REFERRER'] = 'http://img3.cache.netease.com/www/logo/logo_png.png';
 #$_SERVER['HTTP_REFERRER'] = 'http://www.google.com/images/srpr/logo4w.png';
 #$_SERVER['HTTP_REFERRER'] = 'http://www.bing.com/partner/primedns.gif';
 #$_SERVER['HTTP_REFERRER'] = 'http://a248.e.akamai.net/assets.github.com/images/modules/header/github-logotype.png';
@@ -20,6 +20,7 @@ $_SERVER['HTTP_REFERRER'] = 'http://img3.cache.netease.com/www/logo/logo_png.png
 
 
 $request = new HTTPRequest();
+
 
 // Create object
 $assets = new LightCDNEngine($request);

@@ -7,7 +7,7 @@ use Entities\AssetInfo;
 class LightCDNEngine
 {
     
-    private $client_request;
+    private $request_client_to_cache;
     private $allowed_servers;
     private $header;
     
@@ -15,7 +15,7 @@ class LightCDNEngine
     {
         global $settings;
         if (!is_null($request))
-            $this->client_request = $request;
+            $this->request_client_to_cache = $request;
         $this->allowed_servers = $settings['allowed servers'];
     }
     
@@ -29,9 +29,9 @@ class LightCDNEngine
     
     public function getFileNameFromReferrer()
     {
-        @$ext = end(explode('.', $this->client_request->url));
-        return md5($this->client_request->url) . '.' . $ext;
-     
+        @$ext = end(explode('.', $this->request_client_to_cache->url));
+        return md5($this->request_client_to_cache->url) . '.' . $ext;
+        
     }
     
     public function getFilePathFromReferrer()
@@ -47,14 +47,14 @@ class LightCDNEngine
     // Check reguested server is valid or not
     public function isToAllowedServer()
     {
-        return (in_array($this->client_request->host, $this->allowed_servers));
+        return (in_array($this->request_client_to_cache->host, $this->allowed_servers));
     }
     
     public function getAsset()
     {
         global $tackler_config;
         
-        if (($this->client_request->isGET() OR $this->client_request->isHEAD()) AND $this->isToAllowedServer()) {
+        if (($this->request_client_to_cache->isGET() OR $this->request_client_to_cache->isHEAD()) AND $this->isToAllowedServer()) {
             return $this->getServeAsset();
         } else {
             header("Location: " . $tackler_config->get_default_403_handler());
@@ -87,20 +87,39 @@ class LightCDNEngine
         $return_data = array();
         $new_header  = array();
         $ch          = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->client_request->url);
+        curl_setopt($ch, CURLOPT_URL, $this->request_client_to_cache->url);
         curl_setopt($ch, CURLOPT_HEADER, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         $return   = curl_exec($ch);
         $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-		
+        
         curl_close($ch);
         list($curl_header, $asset) = explode("\r\n\r\n", $return, 2);
         
-       
-		
+        
         if ($httpCode == 200) {
+            
+            $request_server_to_cache = array();
+            $data                    = explode("\n", $curl_header);
+            
+            array_shift($data);
+            
+            foreach ($data as $part) {
+                $pos                                             = strpos($part, ':');
+                $key                                             = substr($part, 0, $pos);
+                $value                                           = substr($part, $pos + 1, strlen($part));
+                $request_server_to_cache[strtolower(trim($key))] = trim($value);
+            }
+            
+            if (isset($request_server_to_cache['Date'])) {
+                unset($request_server_to_cache['Date']);
+            }
+            
+            
+            
+            
             // if file exist refresh
             if (file_exists($file_name))
                 @unlink($file_name);
@@ -109,11 +128,11 @@ class LightCDNEngine
             //If write fali return null  (redirect 404)
             if (file_put_contents($file_name, $asset)) {
                 
-                $this->header = serialize($this->client_request->headers);
+                $this->header = serialize($request_server_to_cache);
                 
                 $exist = false;
                 $exist = $entityManager->getRepository('Entities\AssetInfo')->findOneBy(array(
-                    'original_url' => filter($this->client_request->url),
+                    'original_url' => filter($this->request_client_to_cache->url),
                     'deleted' => '0'
                 ));
                 if ($exist == false) {
@@ -121,9 +140,10 @@ class LightCDNEngine
                     $assets_info->setHeader($this->header);
                     $assets_info->setLastServed(new \DateTime('NOW'));
                     $assets_info->setName(filter($this->getFileNameFromReferrer()));
-                    $assets_info->setSize(filter($this->client_request->headers['content-length']));
-                    $assets_info->setOriginalUrl(filter($this->client_request->url));
-                    $assets_info->setMimeType(filter($this->client_request->headers['content-type']));
+                    $assets_info->setSize(filter($request_server_to_cache['content-length']));
+                    $assets_info->setOriginalUrl(filter($this->request_client_to_cache->url));
+                    $assets_info->setMimeType(filter($request_server_to_cache['content-type']));
+                    
                     //save entity to db
                     $entityManager->persist($assets_info);
                     $entityManager->flush();
@@ -144,15 +164,18 @@ class LightCDNEngine
     // Read the record from the database and return
     public function serve()
     {
+        
+        
         ob_start();
         global $entityManager, $connection;
-        $return      = array();
+        $return = array();
+        
         //update last served;
         $assets_info = $entityManager->getRepository('Entities\AssetInfo')->findOneBy(array(
-            'original_url' => filter($this->client_request->url)
+            'original_url' => filter($this->request_client_to_cache->url)
         ));
         
-        #db($assets_info);
+        
         if ($assets_info) {
             $assets_info->setLastServed(new \DateTime('NOW'));
         }
@@ -166,17 +189,56 @@ class LightCDNEngine
             // - header already set . For PHPunit check header already set if set return true.
             if (headers_sent())
                 return true;
+            
+            
             // Build header here, return header
-            $headers = unserialize($assets_info->getHeader());
+            $request_server_to_cache = unserialize($assets_info->getHeader());
             
-            foreach ($this->client_request->headers as $key => $value) {
-                if ($key) {
-                    header($key . ': ' . $value);
-                }
-            }
             
-            if (($this->client_request->isGET()) && file_exists($filename)) {
+            if (isset($request_server_to_cache['content-type']))
+                header('Content-Type: ' . $request_server_to_cache['content-type']);
+            
+            if (isset($request_server_to_cache['content-length']))
+                header('Content-Length: ' . $request_server_to_cache['content-length']);
+            
+            if (isset($request_server_to_cache['via']))
+                header('Via: ' . $_SERVER['HTTP_HOST']);
+            
+            if (isset($request_server_to_cache['vary']))
+                header('Vary: ' . $request_server_to_cache['vary']);
+            
+            if (isset($request_server_to_cache['last-modified']))
+                header('Last-Modified: ' . $request_server_to_cache['last-modified']);
+            
+            if (isset($request_server_to_cache['etag']))
+                header('ETag: ' . $request_server_to_cache['etag']);
+            
+            if (isset($request_server_to_cache['content-language']))
+                header('Content-Language: ' . $request_server_to_cache['content-language']);
+            
+            if (isset($request_server_to_cache['accept-encoding']))
+                header('Accept-Encoding: ' . $request_server_to_cache['accept-encoding']);
+            
+            if (isset($request_server_to_cache['expires']))
+                header('Expires: ' . $request_server_to_cache['expires']);
+            
+            
+            # Add current GMT time
+            header('date: ' . gmdate("D, M d Y H:i:s") . ' GMT');
+            
+            if (($this->request_client_to_cache->isGET()) && file_exists($filename)) {
                 readfile($filename);
+                
+                #  If the no-cache is specified OR expires is 0, then should not occupy space on disk for the file, So unlink file.
+                if (isset($this->request_client_to_cache->headers['cache-control']) && (stristr($this->request_client_to_cache->headers['cache-control'], 'no-cache') OR stristr($this->request_client_to_cache->headers['cache-control'], 'max-age=0'))) {
+                    @unlink($filename);
+                } else if (isset($this->request_client_to_cache->headers['pragma']) && stristr($this->request_client_to_cache->headers['pragma'], 'no-cache')) {
+                    @unlink($filename);
+                } else if (isset($this->request_client_to_cache->headers['expires']) && $this->request_client_to_cache->headers['expires'] == 0) {
+                    @unlink($filename);
+                }
+                
+                
             }
         } else
             return null;
@@ -188,7 +250,7 @@ class LightCDNEngine
         global $entityManager;
         
         $assets_info = $entityManager->getRepository('Entities\AssetInfo')->findOneBy(array(
-            'original_url' => filter($this->client_request->url),
+            'original_url' => filter($this->request_client_to_cache->url),
             'deleted' => '0'
         ));
         
@@ -197,19 +259,19 @@ class LightCDNEngine
         }
         
         
-        if ($this->client_request->headers['last-modified']) {
-            if (!isset($header) OR strtotime($header['last-modified']) != strtotime($this->client_request->headers['last-modified'])) {
+        if ($this->request_client_to_cache->headers['last-modified']) {
+            if (!isset($header) OR strtotime($header['last-modified']) != strtotime($this->request_client_to_cache->headers['last-modified'])) {
                 return false;
             } else {
                 return true;
             }
-        } else if (isset($this->client_request->headers['cache-control']) & !stristr($this->client_request->headers['cache-control'], 'no-cache') & !stristr($this->client_request->headers['cache-control'], 'max-age=0')) {
+        } else if (isset($this->request_client_to_cache->headers['cache-control']) && !stristr($this->request_client_to_cache->headers['cache-control'], 'no-cache') && !stristr($this->request_client_to_cache->headers['cache-control'], 'max-age=0')) {
             return true;
-        } else if (isset($this->client_request->headers['pragma']) & !stristr($this->client_request->headers['pragma'], 'no-cache')) {
+        } else if (isset($this->request_client_to_cache->headers['pragma']) && !stristr($this->request_client_to_cache->headers['pragma'], 'no-cache')) {
             return true;
-        } else if (isset($this->client_request->headers['expires']) & $this->client_request->headers['expires']!=0)  {
-			return true;
-		} else {
+        } else if (isset($this->request_client_to_cache->headers['expires']) && $this->request_client_to_cache->headers['expires'] != 0) {
+            return true;
+        } else {
             return false;
         }
     }

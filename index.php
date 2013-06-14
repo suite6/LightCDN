@@ -26,7 +26,7 @@ require_once "bootstrap.php";
 // Testing
 $test = new LightCDNEngineTest();
 $test->setup();
-$test->testGetServeAsset();
+$test->testGetAsset();
 exit;
 
 // Read HTTPRequest

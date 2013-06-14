@@ -356,6 +356,7 @@ class LightCDNEngine
 			if(isset($clientCacheControlArray['max-age']) and $clientCacheControlArray['max-age']>0)
 			{
 				# yes, then compare
+				db(__FILE__." : ".__LINE__);
 				db($clientCacheControlArray['max-age']);
 			}
 			

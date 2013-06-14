@@ -19,12 +19,18 @@ class LightCDNEngineTest extends \PHPUnit_Framework_TestCase {
         $this->operation = new LightCDNEngine($request);
     }
 	
+	 public function testGetAsset() {
+        $value = $this->operation->getAsset();
+        $this->assertNotNull($value);
+    }
+	
 	 public function testGetServeAsset() {
         $value = $this->operation->getServeAsset();
         $this->assertNotNull($value);
     }
 	
-
+	
+	
     public function testSave() {
         $value = $this->operation->save();
         $this->assertNotNull($value);
@@ -57,9 +63,9 @@ class LightCDNEngineTest extends \PHPUnit_Framework_TestCase {
 						'content-length'=> '992',
 						#'last-modified' => 'Tue, 30 Nov 2010 05:27:30 GMT',
 						
-						#'cache-control' => 'max-age=5184000',
+						'cache-control' => 'max-age=5184000',
 						#'cache-control' => 'no-cache',
-						'cache-control' => 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0',
+						#'cache-control' => 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0',
 						#'cache-control' => 'private, max-age=31536000',
 						#'cache-control' => 'public, max-age=38',
 						

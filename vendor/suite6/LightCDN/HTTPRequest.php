@@ -26,7 +26,12 @@ class HTTPRequest {
 
     function __construct() {
         $this->original_url = $this->getReferrer();
-
+		
+		if(!$this->original_url)
+		{
+			return false;
+		}
+		
         $temp_headers = $this->getHeaders();
         foreach ($temp_headers as $key => $value)
             $this->headers[mb_strtolower($key)] = $value;

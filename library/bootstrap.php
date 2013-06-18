@@ -15,7 +15,7 @@ require_once 'vendor/suite6/Tackler/TacklerAutoload.php';
 // include common.ini.php 
 require_once "common.inc.php";
 
-$dir_path = $root_dir . '\data';
+$dir_path = $root_dir . '/data';
 //initialize config object
 $tackler_config = new suite6\Tackler\TacklerConfiguration();
 

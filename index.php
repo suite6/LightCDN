@@ -3,7 +3,7 @@
 namespace suite6\LightCDN;
 
 ignore_user_abort(true);
-require_once "bootstrap.php";
+require_once "library/bootstrap.php";
 
 
 // Running my test case
@@ -22,18 +22,16 @@ require_once "bootstrap.php";
 
 
 
-
+/*
 // Testing
 $test = new LightCDNEngineTest();
 $test->setup();
 $test->testGetAsset();
 exit;
+*/
 
 // Read HTTPRequest
 $request = new HTTPRequest();
-#db($request);
-#exit;
-
 
 // Create object
 $assets = new LightCDNEngine($request);

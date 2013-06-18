@@ -11,16 +11,18 @@
 
 DROP TABLE IF EXISTS `assets_info`;
 
-CREATE TABLE `assets_info` (
-  `header` blob NOT NULL,
-  `deleted` tinyint(1) NOT NULL DEFAULT '0',
-  `last_served` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `file_size` bigint(20) NOT NULL,
-  `file_name` varchar(255) NOT NULL,
-  `original_url` varchar(255) NOT NULL,
-  `mime_type` text,
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1
+CREATE TABLE IF NOT EXISTS `assets_info` (
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `header` LONGTEXT NOT NULL,
+  `first_served` DATETIME NOT NULL,
+  `last_served` DATETIME NOT NULL,
+  `file_size` BIGINT(20) NOT NULL,
+  `file_name` VARCHAR(255) NOT NULL,
+  `original_url` VARCHAR(255) NOT NULL,
+  `mime_type` TEXT NOT NULL,
+  `deleted` TINYINT(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `where_clause` (`original_url`,`deleted`)
+) DEFAULT CHARSET=utf8 ;
 
 

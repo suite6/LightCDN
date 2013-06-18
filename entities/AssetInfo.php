@@ -34,6 +34,14 @@ class AssetInfo {
      * @var tinyint
      * */
     protected $deleted = 0;
+	
+	
+	 /**
+     * @first_served @Column(type="datetime")
+     * @var timestamp
+     * */
+    protected $first_served;
+
 
     /**
      * @last_served @Column(type="datetime")
@@ -103,6 +111,15 @@ class AssetInfo {
 
     public function getMimeType() {
         return $this->mime_type;
+    }
+	
+	
+	public function setFirstServed($first_served) {
+        $this->first_served = $first_served;
+    }
+	
+	public function getFirstServed() {
+        return $this->first_served;
     }
 
     public function setLastServed($last_served) {

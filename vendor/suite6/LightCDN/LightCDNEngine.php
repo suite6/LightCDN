@@ -8,7 +8,6 @@ class LightCDNEngine
     
     private $request_client_to_cache;
     private $allowed_servers;
-    private $header;
     
     public function __construct($request = null)
     {
@@ -173,8 +172,7 @@ class LightCDNEngine
                     unset($request_server_to_cache['headers']['Via']);
                 }
                 
-                
-                $this->header = serialize($request_server_to_cache['headers']);
+                $request_server_to_cache_serialize = serialize($request_server_to_cache['headers']);
                 
                 $exist = false;
                 $exist = $entityManager->getRepository('Entities\AssetInfo')->findOneBy(array(
@@ -186,7 +184,7 @@ class LightCDNEngine
                 
                 if ($exist == false) {
                     $assets_info = new AssetInfo();
-                    $assets_info->setHeader($this->header);
+                    $assets_info->setHeader($request_server_to_cache_serialize);
                     $assets_info->setFirstServed($servedTime);
                     $assets_info->setLastServed($servedTime);
                     $assets_info->setName(filter($this->getFileNameFromReferrer()));
@@ -200,7 +198,7 @@ class LightCDNEngine
                 } else {
                     
                     # Update entity to db
-                    $exist->setHeader($this->header);
+                    $exist->setHeader($request_server_to_cache_serialize);
                     $exist->setFirstServed($servedTime);
                     $entityManager->flush();
                 }

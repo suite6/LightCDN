@@ -25,9 +25,16 @@ class AssetInfo {
 
     /**
      * @header @Column(type="text")
-     * @var blob
+     * @var longtext
      * */
     protected $header;
+	
+	
+	 /**
+     * @header @Column(type="text")
+     * @var longtext
+     * */
+    protected $asset_headers;
 
     /**
      * @deleted @Column(type="boolean")
@@ -79,6 +86,14 @@ class AssetInfo {
 
     public function setName($file_name) {
         $this->file_name = $file_name;
+    }
+	
+	public function getAssetHeader() {
+        return $this->asset_headers;
+    }
+
+    public function setAssetHeader($asset_headers) {
+        $this->asset_headers = $asset_headers;
     }
 
     public function getHeader() {

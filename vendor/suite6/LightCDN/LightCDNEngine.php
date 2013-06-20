@@ -67,21 +67,7 @@ class LightCDNEngine
             # extract server header and content
             list($curl_header, $content) = explode("\r\n\r\n", $return, 2);
             
-            $headers = array();
-            $data    = explode("\n", $curl_header);
-            
-            array_shift($data);
-            
-            # create array for server request header
-            foreach ($data as $part) {
-                $pos                             = strpos($part, ':');
-                $key                             = substr($part, 0, $pos);
-                $value                           = substr($part, $pos + 1, strlen($part));
-                $headers[strtolower(trim($key))] = trim($value);
-            }
-            
-            # create array for return the values: Dont need HttpCode, just headers and content is enough
-            $request_server_to_cache['headers'] = $headers;
+            $request_server_to_cache['server_header'] = $curl_header;
             $request_server_to_cache['content'] = $content;
             
             # Return Server Data
@@ -111,6 +97,7 @@ class LightCDNEngine
                 $outputArray[$k] = $v;
             }
         }
+		
         return $outputArray;
     }
     
@@ -151,7 +138,21 @@ class LightCDNEngine
         # Execute request to get data from server
         $request_server_to_cache = $this->execute();
         
-        
+		$headers = array();
+		$server_header    = explode("\n", $request_server_to_cache['server_header']);
+		
+		array_shift($server_header);
+		
+		# create array for server request header
+		foreach ($server_header as $part) {
+			$pos                             = strpos($part, ':');
+			$key                             = substr($part, 0, $pos);
+			$value                           = substr($part, $pos + 1, strlen($part));
+			$request_server_to_cache['headers'][strtolower(trim($key))] = trim($value);
+		}
+		
+     
+		
         if ($request_server_to_cache) {
             
             // if file exist refresh
@@ -182,8 +183,12 @@ class LightCDNEngine
                 
                 $servedTime = new \DateTime('NOW');
                 
+				
+				
                 if ($exist == false) {
                     $assets_info = new AssetInfo();
+			
+					$assets_info->setAssetHeader($request_server_to_cache['server_header']);
                     $assets_info->setHeader($request_server_to_cache_serialize);
                     $assets_info->setFirstServed($servedTime);
                     $assets_info->setLastServed($servedTime);
@@ -198,6 +203,7 @@ class LightCDNEngine
                 } else {
                     
                     # Update entity to db
+					$exist->setAssetHeader($request_server_to_cache['server_header']);
                     $exist->setHeader($request_server_to_cache_serialize);
                     $exist->setFirstServed($servedTime);
                     $entityManager->flush();

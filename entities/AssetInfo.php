@@ -23,12 +23,6 @@ class AssetInfo {
      */
     protected $id = null;
 
-    /**
-     * @header @Column(type="text")
-     * @var longtext
-     * */
-    protected $header;
-	
 	
 	 /**
      * @header @Column(type="text")
@@ -79,6 +73,55 @@ class AssetInfo {
      * @var text
      * */
     protected $mime_type;
+	
+	/**
+     * @content_length @Column(type="text")
+     * @var text
+     * */
+    protected $content_length;
+	
+	/**
+     * @vary @Column(type="text")
+     * @var text
+     * */
+    protected $vary;
+	
+	/**
+     * @last_modified @Column(type="text")
+     * @var text
+     * */
+    protected $last_modified;
+	
+	/**
+     * @etag @Column(type="text")
+     * @var text
+     * */
+    protected $etag;
+	
+	/**
+     * @content_language @Column(type="text")
+     * @var text
+     * */
+    protected $content_language;
+	
+	/**
+     * @accept_encoding @Column(type="text")
+     * @var text
+     * */
+    protected $accept_encoding;
+	
+	/**
+     * @expires @Column(type="text")
+     * @var text
+     * */
+    protected $expires;
+	
+	/**
+     * @expires @Column(type="text")
+     * @via text
+     * */
+    protected $via;
+	
 
     public function getName() {
         return $this->file_name;
@@ -96,13 +139,7 @@ class AssetInfo {
         $this->asset_headers = $asset_headers;
     }
 
-    public function getHeader() {
-        return $this->header;
-    }
-
-    public function setHeader($header) {
-        $this->header = $header;
-    }
+   
 
     public function setSize($file_size) {
         $this->file_size = $file_size;
@@ -128,6 +165,71 @@ class AssetInfo {
         return $this->mime_type;
     }
 	
+	public function setContentLength($content_length) {
+        $this->content_length = $content_length;
+    }
+
+    public function getContentLength() {
+        return $this->content_length;
+    }
+	
+	public function setVary($vary) {
+        $this->vary = $vary;
+    }
+
+    public function getVary() {
+        return $this->vary;
+    }
+	
+	public function setVia($via) {
+        $this->via = $via;
+    }
+
+    public function getVia() {
+        return $this->via;
+    }
+	
+	public function setLastModified($last_modified) {
+        $this->last_modified = $last_modified;
+    }
+
+    public function getLastModified() {
+        return $this->last_modified;
+    }
+	
+	public function setEtag($etag) {
+        $this->etag = $etag;
+    }
+
+    public function getEtag() {
+        return $this->etag;
+    }
+	
+	public function setContentLanguage($content_language) {
+        $this->content_language = $content_language;
+    }
+
+    public function getContentLanguage() {
+        return $this->content_language;
+    }
+	
+	public function setAcceptEncoding($accept_encoding) {
+        $this->accept_encoding = $accept_encoding;
+    }
+
+    public function getAcceptEncoding() {
+        return $this->accept_encoding;
+    }
+	
+	public function setExpires($expires) {
+
+		
+        $this->expires = $expires;
+    }
+
+    public function getExpires() {
+        return $this->expires;
+    }
 	
 	public function setFirstServed($first_served) {
         $this->first_served = $first_served;

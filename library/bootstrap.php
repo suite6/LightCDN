@@ -15,7 +15,12 @@ require_once 'vendor/suite6/Tackler/TacklerAutoload.php';
 // include common.ini.php 
 require_once "common.inc.php";
 
+# Path to save Cache
 $dir_path = $root_dir . '/data';
+
+# Log all routes in log.txt file under $dir_path : keep it false on production
+$debug_mode = false;
+
 //initialize config object
 $tackler_config = new suite6\Tackler\TacklerConfiguration();
 
@@ -31,7 +36,7 @@ $doctrineClassLoaderRepo->register();
 $settings = array();
 
 //Configuration file path and name 
-$config_file = 'config/config.yaml';
+$config_file  = 'config/config.yaml';
 $default_file = 'config/defaults.yaml';
 
 if (file_exists($config_file)) {
@@ -54,32 +59,41 @@ if (file_exists($config_file)) {
 $dbsettings = array();
 $dbsettings = $settings['database'];
 
-$paths = array(__DIR__ . "Entities");
+$paths     = array(
+    __DIR__ . "Entities"
+);
 $isDevMode = true;
-$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
+$config    = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 
 //// the connection configuration
 //// Connection Setup
+$dbParams      = array(
+    'driver' => $dbsettings['driver'],
+    'user' => $dbsettings['user'],
+    'password' => $dbsettings['password'],
+    'dbname' => $dbsettings['dbname']
+);
+$entityManager = EntityManager::create($dbParams, $config);
+$connection    = $entityManager->getConnection();
+
+
+/*
+$sm = $connection->getSchemaManager();
+//List of database
+$databases = $sm->listDatabases();
+
+// If DB not exist create it
+if (!in_array($dbsettings['dbname'], $databases))
+    $sm->createDatabase($dbsettings['dbname']);
+
 $dbParams = array('driver' => $dbsettings['driver'], 'user' => $dbsettings['user'], 'password' => $dbsettings['password'], 'dbname' => $dbsettings['dbname']);
 $entityManager = EntityManager::create($dbParams, $config);
 $connection = $entityManager->getConnection();
 
 
-//$sm = $connection->getSchemaManager();
-////List of database
-//$databases = $sm->listDatabases();
-//
-//// If DB not exist create it
-//if (!in_array($dbsettings['dbname'], $databases))
-//    $sm->createDatabase($dbsettings['dbname']);
-//
-//$dbParams = array('driver' => $dbsettings['driver'], 'user' => $dbsettings['user'], 'password' => $dbsettings['password'], 'dbname' => $dbsettings['dbname']);
-//$entityManager = EntityManager::create($dbParams, $config);
-//$connection = $entityManager->getConnection();
-//
-//
-//$table = 'assets_info';
-//// check table if not exist create_table() call
-//$check_table = checkTable($table);
-//if ($check_table == false)
-//    create_table($table);
+$table = 'assets_info';
+// check table if not exist create_table() call
+$check_table = checkTable($table);
+if ($check_table == false)
+    create_table($table);
+*/

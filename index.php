@@ -19,16 +19,19 @@ require_once "library/bootstrap.php";
 #$_SERVER['HTTP_REFERRER'] = 'http://localhost/test/lightcdn.docx';
 #$_SERVER['HTTP_REFERRER'] = 'http://g-ecx.images-amazon.com/images/G/01/gno/images/general/navAmazonLogoFooter._V169459313_.gif';
 #$_SERVER['HTTP_REFERRER'] = 'http://www.google.com/images/srpr/logo4w.png';
+#$_SERVER['HTTP_REFERRER'] = 'http://acmmm10.unifi.it/wp-content/uploads/2009/09/google_logo_home.jpg';
 
 
 
-/*
-// Testing
-$test = new LightCDNEngineTest();
-$test->setup();
-$test->testGetAsset();
-exit;
-*/
+
+# Testing
+
+	$test = new LightCDNEngineTest();
+	$test->setup();
+	$test->testGetAsset();
+	exit;
+
+
 
 // Read HTTPRequest
 $request = new HTTPRequest();

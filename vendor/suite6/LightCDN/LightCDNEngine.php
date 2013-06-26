@@ -64,11 +64,13 @@ class LightCDNEngine
         # Check if httpCode is OK
         if ($httpCode == 200) {
             
+            
+            
             # extract server header and content
             list($curl_header, $content) = explode("\r\n\r\n", $return, 2);
             
             $request_server_to_cache['server_header'] = $curl_header;
-            $request_server_to_cache['content'] = $content;
+            $request_server_to_cache['content']       = $content;
             
             # Return Server Data
             return $request_server_to_cache;
@@ -97,7 +99,10 @@ class LightCDNEngine
                 $outputArray[$k] = $v;
             }
         }
-		
+        
+        
+        
+        
         return $outputArray;
     }
     
@@ -106,9 +111,13 @@ class LightCDNEngine
     {
         global $tackler_config;
         
+        
+        
         if (($this->request_client_to_cache->method === 'GET' OR $this->request_client_to_cache->method === 'HEAD') AND $this->isToAllowedServer()) {
+            $this->write_log('getAsset: true :: Url:' . $this->request_client_to_cache->url);
             return $this->getServeAsset();
         } else {
+            $this->write_log('getAsset: false, 403_handler :: Url:' . $this->request_client_to_cache->url);
             header("Location: " . $tackler_config->get_default_403_handler());
         }
     }
@@ -118,8 +127,10 @@ class LightCDNEngine
         global $entityManager, $tackler_config;
         
         if (file_exists($this->getFilePathFromReferrer()) AND $this->validate()) {
+            $this->write_log('Data validated and served.');
             $this->serve();
         } elseif ($this->save()) {
+            $this->write_log('Data saved and served.');
             $this->serve();
         } else {
             header("Location: " . $tackler_config->get_default_404_handler());
@@ -138,21 +149,21 @@ class LightCDNEngine
         # Execute request to get data from server
         $request_server_to_cache = $this->execute();
         
-		$headers = array();
-		$server_header    = explode("\n", $request_server_to_cache['server_header']);
-		
-		array_shift($server_header);
-		
-		# create array for server request header
-		foreach ($server_header as $part) {
-			$pos                             = strpos($part, ':');
-			$key                             = substr($part, 0, $pos);
-			$value                           = substr($part, $pos + 1, strlen($part));
-			$request_server_to_cache['headers'][strtolower(trim($key))] = trim($value);
-		}
-		
-     
-		
+        
+        $headers       = array();
+        $server_header = explode("\n", $request_server_to_cache['server_header']);
+        
+        array_shift($server_header);
+        
+        # create array for server request header
+        foreach ($server_header as $part) {
+            $pos                                                        = strpos($part, ':');
+            $key                                                        = substr($part, 0, $pos);
+            $value                                                      = substr($part, $pos + 1, strlen($part));
+            $request_server_to_cache['headers'][strtolower(trim($key))] = trim($value);
+        }
+        
+        
         if ($request_server_to_cache) {
             
             // if file exist refresh
@@ -183,28 +194,40 @@ class LightCDNEngine
                 
                 $servedTime = new \DateTime('NOW');
                 
-				
-				
                 if ($exist == false) {
                     $assets_info = new AssetInfo();
-			
-					$assets_info->setAssetHeader($request_server_to_cache['server_header']);
-                    $assets_info->setHeader($request_server_to_cache_serialize);
+                    $assets_info->setAssetHeader($request_server_to_cache['server_header']);
                     $assets_info->setFirstServed($servedTime);
                     $assets_info->setLastServed($servedTime);
                     $assets_info->setName(filter($this->getFileNameFromReferrer()));
                     $assets_info->setSize(filter($request_server_to_cache['headers']['content-length']));
                     $assets_info->setOriginalUrl(filter($this->request_client_to_cache->url));
-                    $assets_info->setMimeType(filter($request_server_to_cache['headers']['content-type']));
+                    @$assets_info->setMimeType(filter($request_server_to_cache['headers']['content-type']));
+                    @$assets_info->setContentLength(filter($request_server_to_cache['headers']['content-length']));
+                    @$assets_info->setVary(filter($request_server_to_cache['headers']['vary']));
+                    @$assets_info->setLastModified(filter($request_server_to_cache['headers']['last-modified']));
+                    @$assets_info->setEtag(filter($request_server_to_cache['headers']['etag']));
+                    @$assets_info->setContentLanguage(filter($request_server_to_cache['headers']['content-language']));
+                    @$assets_info->setAcceptEncoding($request_server_to_cache['headers']['accept-encoding']);
+                    @$assets_info->setExpires($request_server_to_cache['headers']['expires']);
+                    @$assets_info->setVia(filter($request_server_to_cache['headers']['via']));
                     
                     #save entity to db
                     $entityManager->persist($assets_info);
                     $entityManager->flush();
                 } else {
                     
-                    # Update entity to db
-					$exist->setAssetHeader($request_server_to_cache['server_header']);
-                    $exist->setHeader($request_server_to_cache_serialize);
+                    # Update entity to db	
+                    $exist->setAssetHeader($request_server_to_cache['server_header']);
+                    @$exist->setMimeType(filter($request_server_to_cache['headers']['content-type']));
+                    @$exist->setContentLength(filter($request_server_to_cache['headers']['content-length']));
+                    @$exist->setVary(filter($request_server_to_cache['headers']['vary']));
+                    @$exist->setLastModified(filter($request_server_to_cache['headers']['last-modified']));
+                    @$exist->setEtag(filter($request_server_to_cache['headers']['etag']));
+                    @$exist->setContentLanguage(filter($request_server_to_cache['headers']['content-language']));
+                    @$exist->setAcceptEncoding(filter($request_server_to_cache['headers']['accept-encoding']));
+                    @$exist->setExpires(filter($request_server_to_cache['headers']['expires']));
+                    @$exist->setVia(filter($request_server_to_cache['headers']['via']));
                     $exist->setFirstServed($servedTime);
                     $entityManager->flush();
                 }
@@ -234,7 +257,7 @@ class LightCDNEngine
         if ($assets_info) {
             $assets_info->setLastServed(new \DateTime('NOW'));
         }
-
+        
         $entityManager->flush();
         ignore_user_abort(false);
         
@@ -246,36 +269,45 @@ class LightCDNEngine
                 return true;
             
             
-            // Build header here, return header
-            $assets_header = unserialize($assets_info->getHeader());
+            // Build header here, return header			
+            $assets_mimeType        = $assets_info->getMimeType();
+            $assets_contentLength   = $assets_info->getContentLength();
+            $assets_via             = $assets_info->getVia();
+            $assets_vary            = $assets_info->getVary();
+            $assets_lastModified    = $assets_info->getLastModified();
+            $assets_etag            = $assets_info->getEtag();
+            $assets_contentLanguage = $assets_info->getContentLanguage();
+            $assets_acceptEncoding  = $assets_info->getAcceptEncoding();
+            $assets_expires         = $assets_info->getExpires();
             
             
-            if (isset($assets_header['content-type']))
-                header('Content-Type: ' . $assets_header['content-type']);
             
-            if (isset($assets_header['content-length']))
-                header('Content-Length: ' . $assets_header['content-length']);
+            if ($assets_mimeType)
+                header('Content-Type: ' . $assets_mimeType);
             
-            if (isset($assets_header['via']))
+            if ($assets_contentLength)
+                header('Content-Length: ' . $assets_contentLength);
+            
+            if ($assets_via)
                 header('Via: ' . $_SERVER['HTTP_HOST']);
             
-            if (isset($assets_header['vary']))
-                header('Vary: ' . $assets_header['vary']);
+            if ($assets_vary)
+                header('Vary: ' . $assets_vary);
             
-            if (isset($assets_header['last-modified']))
-                header('Last-Modified: ' . $assets_header['last-modified']);
+            if ($assets_lastModified)
+                header('Last-Modified: ' . $assets_lastModified);
             
-            if (isset($assets_header['etag']))
-                header('ETag: ' . $assets_header['etag']);
+            if ($assets_etag)
+                header('ETag: ' . $assets_etag);
             
-            if (isset($assets_header['content-language']))
-                header('Content-Language: ' . $assets_header['content-language']);
+            if ($assets_contentLanguage)
+                header('Content-Language: ' . $assets_contentLanguage);
             
-            if (isset($assets_header['accept-encoding']))
-                header('Accept-Encoding: ' . $assets_header['accept-encoding']);
+            if ($assets_acceptEncoding)
+                header('Accept-Encoding: ' . $assets_acceptEncoding);
             
-            if (isset($assets_header['expires']))
-                header('Expires: ' . $assets_header['expires']);
+            if ($assets_expires)
+                header('Expires: ' . $assets_expires);
             
             
             # Add current GMT time
@@ -303,23 +335,27 @@ class LightCDNEngine
             'deleted' => '0'
         ));
         
-        # If data is aviable then unserialize header to get array for further operations
+        # If data is available then fetch for further operations
         if ($assets_info) {
-            $assets_header      = unserialize($assets_info->getHeader());
-            $assets_firstServed = (array) $assets_info->getFirstServed();
+            $assets_firstServed  = (array) $assets_info->getFirstServed();
+            $assets_lastModified = $assets_info->getLastModified(); #
+            $assets_etag         = $assets_info->getEtag(); #
         }
-		
+        
         
         
         /**
          * If last-modified available with client header
          * The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
          **/
-        if (isset($this->request_client_to_cache->headers['last-modified'])) {
-            if (!isset($assets_header['last-modified']) OR strtotime($assets_header['last-modified']) != strtotime($this->request_client_to_cache->headers['last-modified'])) {
-                return false;
-            } else {
+        if (isset($this->request_client_to_cache->headers['last-modified']) AND isset($this->request_client_to_cache->headers['last-modified']) != '') {
+            
+            if (isset($assets_lastModified) AND strtotime($assets_lastModified) == strtotime($this->request_client_to_cache->headers['last-modified'])) {
+                $this->write_log('last-modified: true');
                 return true;
+            } else {
+                $this->write_log('last-modified: false');
+                return false;
             }
         }
         
@@ -328,24 +364,30 @@ class LightCDNEngine
          * If the resource content at that URL ever changes, a new and different ETag is assigned. 
          * Used in this manner ETags are similar to fingerprints, and they can be quickly compared to determine if two versions of a resource are the same or not.
          **/
-        if (isset($this->request_client_to_cache->headers['etag'])) {
-            if (!isset($assets_header['etag']) OR strtotime($assets_header['etag']) != strtotime($this->request_client_to_cache->headers['etag'])) {
-                return false;
-            } else {
+        if (isset($this->request_client_to_cache->headers['etag']) AND $this->request_client_to_cache->headers['etag'] != '') {
+            
+            if (isset($assets_etag) AND $assets_etag == $this->request_client_to_cache->headers['etag']) {
+                $this->write_log('etag: true');
                 return true;
+            } else {
+                $this->write_log('etag: false');
+                return false;
             }
         }
+        
         
         
         /**
          *    Pragma is the HTTP/1.0 implementation and cache-control is the HTTP/1.1 implementation of the same concept.
          *    They both are meant to prevent the client from caching the response. Older clients may not support HTTP/1.1 which is why that header is still in use.
          **/
-        if (isset($this->request_client_to_cache->headers['cache-control']) || isset($this->request_client_to_cache->headers['pragma'])) {
+        if ((isset($this->request_client_to_cache->headers['cache-control']) AND !empty($this->request_client_to_cache->headers['cache-control'])) || (isset($this->request_client_to_cache->headers['pragma']) AND !empty($this->request_client_to_cache->headers['pragma']))) {
             
             if ($this->request_client_to_cache->headers['cache-control']) {
+                $this->write_log('IN: cache-control');
                 $clientCacheControlArray = $this->extractAsArray($this->request_client_to_cache->headers['cache-control']);
             } else {
+                $this->write_log('IN: pragma');
                 # Reuse same code for pragma bcas it is same alike cache-control but just for HTTP/1.0
                 $clientCacheControlArray = $this->extractAsArray($this->request_client_to_cache->headers['pragma']);
             }
@@ -361,6 +403,7 @@ class LightCDNEngine
             foreach ($search as $key => $value) {
                 # If the client is making a request and asks that it not be cached, then we should issue a 302 redirect to the asset URL.
                 if (array_key_exists($value, $clientCacheControlArray) AND $clientCacheControlArray[$value] == 0) {
+                    $this->write_log('Location redirected 302');
                     header('Location:' . $this->request_client_to_cache->url);
                     die();
                 }
@@ -373,16 +416,19 @@ class LightCDNEngine
                 
                 # if First served is not available then no need to proceed further
                 if (!$assets_firstServed) {
+                    $this->write_log('No assets_firstServed');
                     return false;
                 }
-                
                 
                 $expire_time  = date('Y-m-d H:i:s', strtotime($assets_firstServed['date'] . " +" . $clientCacheControlArray['max-age'] . " Seconds"));
                 $current_time = date('Y-m-d H:i:s');
                 
                 # TRUE if time isnt expired else default FALSE
                 if ($expire_time >= $current_time) {
+                    $this->write_log('max-age:true');
                     return true;
+                } else { # do not return false, Lets validate Expires
+                    $this->write_log('max-age:false');
                 }
                 
             }
@@ -396,33 +442,13 @@ class LightCDNEngine
             
             # TRUE if time isnt expired else default FALSE
             if ($expires_time >= $current_time) {
+                $this->write_log('expires:true');
                 return true;
+            } else {
+                # do not return false, Default would be false
+                $this->write_log('expires:false');
             }
         }
-        
-        
-        #  If the no-cache is specified OR expires is 0, then should not occupy space on disk for the file, So unlink file.
-        /*if (isset($this->request_client_to_cache->headers['cache-control']) && (stristr($this->request_client_to_cache->headers['cache-control'], 'no-cache') OR stristr($this->request_client_to_cache->headers['cache-control'], 'max-age=0'))) {
-        header('Location:'.$this->request_client_to_cache->url);
-        } else if (isset($this->request_client_to_cache->headers['pragma']) && stristr($this->request_client_to_cache->headers['pragma'], 'no-cache')) {
-        header('Location:'.$this->request_client_to_cache->url);
-        } else if (isset($this->request_client_to_cache->headers['expires']) && $this->request_client_to_cache->headers['expires'] == 0) {
-        header('Location:'.$this->request_client_to_cache->url);
-        }*/
-        
-        
-        /*
-        if (isset($this->request_client_to_cache->headers['cache-control']) && !stristr($this->request_client_to_cache->headers['cache-control'], 'no-cache') && !stristr($this->request_client_to_cache->headers['cache-control'], 'max-age=0')) {
-        return true;
-        } else if (isset($this->request_client_to_cache->headers['pragma']) && !stristr($this->request_client_to_cache->headers['pragma'], 'no-cache')) {
-        return true;
-        } else if (isset($this->request_client_to_cache->headers['expires']) && $this->request_client_to_cache->headers['expires'] != 0) {
-        return true;
-        } else {
-        return false;
-        }
-        */
-        
         
     }
     
@@ -503,6 +529,20 @@ class LightCDNEngine
         closedir($dh);
         
         return $dirSize;
+    }
+    
+    
+    function write_log($content)
+    {
+        global $dir_path, $debug_mode;
+        
+        if ($debug_mode == true) {
+            $somecontent = "[" . date('Y-m-d H:i:s') . "] " . $content . "\n\r";
+            $filename    = $dir_path . '/log.txt';
+            $handle      = fopen($filename, 'a');
+            fwrite($handle, $somecontent);
+            fclose($handle);
+        }
     }
     
 }

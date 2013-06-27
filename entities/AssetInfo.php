@@ -116,12 +116,6 @@ class AssetInfo {
      * */
     protected $expires;
 	
-	/**
-     * @expires @Column(type="text")
-     * @via text
-     * */
-    protected $via;
-	
 
     public function getName() {
         return $this->file_name;
@@ -181,14 +175,7 @@ class AssetInfo {
         return $this->vary;
     }
 	
-	public function setVia($via) {
-        $this->via = $via;
-    }
 
-    public function getVia() {
-        return $this->via;
-    }
-	
 	public function setLastModified($last_modified) {
         $this->last_modified = $last_modified;
     }

@@ -179,10 +179,7 @@ class LightCDNEngine
                     $request_server_to_cache['headers']['content-length'] = filesize($file_name);
                 }
                 
-                # Strip Via from server header
-                if (isset($request_server_to_cache['headers']['Via'])) {
-                    unset($request_server_to_cache['headers']['Via']);
-                }
+               
                 
                 $request_server_to_cache_serialize = serialize($request_server_to_cache['headers']);
                 
@@ -210,7 +207,6 @@ class LightCDNEngine
                     @$assets_info->setContentLanguage(filter($request_server_to_cache['headers']['content-language']));
                     @$assets_info->setAcceptEncoding($request_server_to_cache['headers']['accept-encoding']);
                     @$assets_info->setExpires($request_server_to_cache['headers']['expires']);
-                    @$assets_info->setVia(filter($request_server_to_cache['headers']['via']));
                     
                     #save entity to db
                     $entityManager->persist($assets_info);
@@ -227,7 +223,6 @@ class LightCDNEngine
                     @$exist->setContentLanguage(filter($request_server_to_cache['headers']['content-language']));
                     @$exist->setAcceptEncoding(filter($request_server_to_cache['headers']['accept-encoding']));
                     @$exist->setExpires(filter($request_server_to_cache['headers']['expires']));
-                    @$exist->setVia(filter($request_server_to_cache['headers']['via']));
                     $exist->setFirstServed($servedTime);
                     $entityManager->flush();
                 }
@@ -272,7 +267,6 @@ class LightCDNEngine
             // Build header here, return header			
             $assets_mimeType        = $assets_info->getMimeType();
             $assets_contentLength   = $assets_info->getContentLength();
-            $assets_via             = $assets_info->getVia();
             $assets_vary            = $assets_info->getVary();
             $assets_lastModified    = $assets_info->getLastModified();
             $assets_etag            = $assets_info->getEtag();
@@ -288,7 +282,6 @@ class LightCDNEngine
             if ($assets_contentLength)
                 header('Content-Length: ' . $assets_contentLength);
             
-            if ($assets_via)
                 header('Via: ' . $_SERVER['HTTP_HOST']);
             
             if ($assets_vary)
@@ -312,9 +305,6 @@ class LightCDNEngine
             
             # Add current GMT time
             header('date: ' . gmdate("D, M d Y H:i:s") . ' GMT');
-            
-            #print_r();
-            #exit;
             
             if ($this->request_client_to_cache->method === 'GET' && file_exists($filename)) {
                 readfile($filename);

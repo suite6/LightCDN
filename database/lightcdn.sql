@@ -21,7 +21,6 @@ CREATE TABLE `assets_info` (
   `original_url` varchar(255) NOT NULL,
   `mime_type` varchar(255) DEFAULT NULL,
   `content_length` varchar(255) DEFAULT NULL,
-  `via` varchar(255) DEFAULT NULL,
   `vary` varchar(255) DEFAULT NULL,
   `last_modified` varchar(255) DEFAULT NULL,
   `etag` varchar(255) DEFAULT NULL,

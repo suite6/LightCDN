@@ -25,18 +25,21 @@ require_once "library/bootstrap.php";
 
 
 # Testing
-
+/*
 	$test = new LightCDNEngineTest();
 	$test->setup();
 	$test->testGetAsset();
 	exit;
-
+*/
 
 
 // Read HTTPRequest
 $request = new HTTPRequest();
 
-// Create object
+// Create object of LightCDNClientRequest
+$clientRequest = new LightCDNClientRequest($request);
+
+// Create object of LightCDNEngine
 $assets = new LightCDNEngine($request);
 
 // Get  assets

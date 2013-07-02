@@ -19,7 +19,7 @@ require_once "common.inc.php";
 $dir_path = $root_dir . '/data';
 
 # Log all routes in log.txt file under $dir_path : keep it false on production
-$debug_mode = false;
+$debug_mode = true;
 
 //initialize config object
 $tackler_config = new suite6\Tackler\TacklerConfiguration();

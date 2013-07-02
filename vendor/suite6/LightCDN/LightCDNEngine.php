@@ -48,26 +48,21 @@ class LightCDNEngine
         return (in_array($this->request_client_to_cache->host, $this->allowed_servers));
     }
     
-    public function execute()
+    public function fetchServerData()
     {
-        # Execute code
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->request_client_to_cache->url);
-        curl_setopt($ch, CURLOPT_HEADER, 1);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        $return   = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE); # get http code
-        curl_close($ch);
-        
+		
+		global $clientRequest;
+		$clientRequest->execute();
+		
+		$serverData = $clientRequest->getServerData();
+		$httpCode = $clientRequest->getHttpCode();
+		
+		
         # Check if httpCode is OK
         if ($httpCode == 200) {
-            
-            
-            
+                        
             # extract server header and content
-            list($curl_header, $content) = explode("\r\n\r\n", $return, 2);
+            list($curl_header, $content) = explode("\r\n\r\n", $serverData, 2);
             
             $request_server_to_cache['server_header'] = $curl_header;
             $request_server_to_cache['content']       = $content;
@@ -99,9 +94,7 @@ class LightCDNEngine
                 $outputArray[$k] = $v;
             }
         }
-        
-        
-        
+
         
         return $outputArray;
     }
@@ -147,7 +140,7 @@ class LightCDNEngine
         $file_name = $this->getFilePathFromURL();
         
         # Execute request to get data from server
-        $request_server_to_cache = $this->execute();
+        $request_server_to_cache = $this->fetchServerData();
         
         
         $headers       = array();
